@@ -16,7 +16,7 @@
 | 模块 | 技术 |
 |------|------|
 | 大模型 | LM Studio + Qwen2.5-7B-Instruct（可替换其他） |
-| 搜索 | `ddgs` (DuckDuckGo) |
+| 搜索 | `ddgs` |
 | 文生图 | 智谱 AI `cogview-3-flash` |
 | Web框架 | Flask |
 | 工具调用 | OpenAI Function Calling 兼容接口 |
@@ -30,28 +30,32 @@
 - 智谱 AI API Key（[获取地址](https://open.bigmodel.cn/)）
 
 ### 2. 克隆项目
+```bash
 git clone https://github.com/BenSimmons66/AIGC-Agent.git
 cd AIGC-Agent
 
-3. 安装依赖
+## 安装依赖
 pip install -r requirements.txt
-4. 配置环境变量
+
+## 配置环境变量
 复制 .env.example 为 .env（或直接创建），写入：
+
+text
 ZHIPU_API_KEY=你的智谱API密钥
 
-5. 启动 LM Studio
+## 启动 LM Studio
 打开 LM Studio → 加载你的模型（例如 qwen2.5-7b-instruct-1m）
 
 点击左侧 <> (Developer) → 启动 Local Inference Server
 
 确认端口为 1234，访问 http://localhost:1234/v1/models 测试
 
-6. 运行 Web 服务
-bash
+##  运行 Web 服务
+
 python app.py
 打开浏览器访问 http://127.0.0.1:7860 即可使用。
 
-🎮 使用示例
+## 🎮 使用示例
 在输入框输入：
 
 搜索今天的人工智能新闻
@@ -60,8 +64,7 @@ python app.py
 
 智能体会自动调用相应工具，并将结果展示在聊天框中。
 
-📁 项目结构
-text
+## 📁 项目结构
 .
 ├── app.py                 # Flask Web 界面
 ├── agent.py               # 智能体核心逻辑（工具调用、搜索、生图）
@@ -69,19 +72,3 @@ text
 ├── .env.example           # 环境变量示例（需复制为.env）
 ├── .gitignore
 └── README.md
-🔧 可能的问题与解决
-问题	解决方案
-搜索时出错 DuckDuckGo 搜索时出错	可能是网络无法访问 DuckDuckGo，可尝试更换搜索引擎（如百度爬虫或 Brave API）。
-LM Studio 连接失败	检查是否启动了 Local Inference Server，端口是否为 1234。
-模型不调用工具	确认模型支持 Function Calling（推荐 Qwen 系列），或调整 System Prompt。
-📝 后续优化方向
-支持流式输出（SSE）
-
-加入本地 OpenSerp 搜索服务
-
-对话历史持久化（SQLite）
-
-打包为 Docker 镜像
-
-📄 许可证
-MIT
