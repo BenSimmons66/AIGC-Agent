@@ -34,28 +34,28 @@
 git clone https://github.com/BenSimmons66/AIGC-Agent.git
 cd AIGC-Agent
 
-## 安装依赖
+### 3.安装依赖
 pip install -r requirements.txt
 
-## 配置环境变量
+### 4.配置环境变量
 复制 .env.example 为 .env（或直接创建），写入：
 
 text
 ZHIPU_API_KEY=你的智谱API密钥
 
-## 启动 LM Studio
+### 5.启动 LM Studio
 打开 LM Studio → 加载你的模型（例如 qwen2.5-7b-instruct-1m）
 
 点击左侧 <> (Developer) → 启动 Local Inference Server
 
 确认端口为 1234，访问 http://localhost:1234/v1/models 测试
 
-##  运行 Web 服务
+###  6.运行 Web 服务
 
 python app.py
 打开浏览器访问 http://127.0.0.1:7860 即可使用。
 
-## 🎮 使用示例
+### 🎮 使用示例
 在输入框输入：
 
 搜索今天的人工智能新闻
@@ -64,7 +64,7 @@ python app.py
 
 智能体会自动调用相应工具，并将结果展示在聊天框中。
 
-## 📁 项目结构
+### 📁 项目结构
 .
 ├── app.py                 # Flask Web 界面
 ├── agent.py               # 智能体核心逻辑（工具调用、搜索、生图）
