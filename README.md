@@ -64,6 +64,7 @@ python app.py
 智能体会自动调用相应工具，并将结果展示在聊天框中。
 
 ### 📁 项目结构
+```
 .
 ├── app.py                 # Flask Web 界面
 ├── agent.py               # 智能体核心逻辑（工具调用、搜索、生图）
@@ -71,3 +72,4 @@ python app.py
 ├── .env.example           # 环境变量示例（需复制为.env）
 ├── .gitignore
 └── README.md
+```
