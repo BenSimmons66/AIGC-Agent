@@ -30,7 +30,6 @@
 - 智谱 AI API Key（[获取地址](https://open.bigmodel.cn/)）
 
 ### 2. 克隆项目
-```bash
 git clone https://github.com/BenSimmons66/AIGC-Agent.git
 cd AIGC-Agent
 
