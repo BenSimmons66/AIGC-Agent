@@ -30,12 +30,14 @@
 - 智谱 AI API Key（[获取地址](https://open.bigmodel.cn/)）
 
 ### 2. 克隆项目
+```bash
 git clone https://github.com/BenSimmons66/AIGC-Agent.git
 cd AIGC-Agent
-
+```
 ### 3.安装依赖
+```bash
 pip install -r requirements.txt
-
+```
 ### 4.配置环境变量
 复制 .env.example 为 .env（或直接创建），写入：
 
